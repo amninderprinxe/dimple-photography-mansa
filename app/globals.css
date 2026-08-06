@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background-color: #07070a;
+  color: #f4f2ea;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(201, 162, 39, 0.35);
+  color: #f4f2ea;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #07070a;
+}
+::-webkit-scrollbar-thumb {
+  background: #3a3a2f;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8f6b12;
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/[0.04] backdrop-blur-xl border border-white/10;
+  }
+
+  .glass-gold-border {
+    border: 1px solid rgba(201, 162, 39, 0.28);
+  }
+
+  .glass-card {
+    @apply glass glass-gold-border rounded-2xl shadow-glass transition-all duration-500;
+  }
+
+  .glass-card:hover {
+    border-color: rgba(233, 206, 121, 0.55);
+    box-shadow: 0 0 40px rgba(201, 162, 39, 0.18), 0 8px 32px rgba(0, 0, 0, 0.5);
+  }
+
+  .eyebrow {
+    @apply font-body uppercase text-xs tracking-widest2 text-gold-light/90;
+  }
+
+  .section-heading {
+    @apply font-display text-4xl md:text-5xl lg:text-6xl text-ivory leading-[1.05];
+  }
+
+  .gold-text {
+    background: linear-gradient(135deg, #e9ce79 0%, #c9a227 55%, #8f6b12 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .btn-gold {
+    @apply relative inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-body text-sm tracking-wider uppercase text-ink font-semibold overflow-hidden transition-transform duration-300;
+    background: linear-gradient(135deg, #e9ce79 0%, #c9a227 55%, #8f6b12 100%);
+  }
+
+  .btn-gold:hover {
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-body text-sm tracking-wider uppercase text-ivory glass-gold-border border transition-all duration-300 hover:bg-gold/10;
+  }
+
+  .divider-gold {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201, 162, 39, 0.6), transparent);
+  }
+}
+
+@layer utilities {
+  .text-shadow-soft {
+    text-shadow: 0 2px 30px rgba(0, 0, 0, 0.5);
+  }
+}
