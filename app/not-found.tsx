@@ -1,4 +1,3 @@
-import Link from "next/link";
 import ApertureMark from "@/components/ui/ApertureMark";
 
 export default function NotFound() {
@@ -12,11 +11,9 @@ export default function NotFound() {
         The page you&apos;re looking for may have been moved or never
         developed. Let&apos;s get you back to the gallery.
       </p>
-      <Link 
-          href="/" 
-          className="btn-gold mt-8">
-        Return Home
-      </Link>
+      <a href="/" className="btn-gold mt-8">
+        Back to Home
+      </a>
     </main>
   );
 }

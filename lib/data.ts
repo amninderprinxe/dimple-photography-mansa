@@ -6,7 +6,7 @@ export const studio = {
   phone: "+91 98770 83009",
   whatsapp: "919877083009",
   email: "gs239087@gmail.com",
-  instagram: "@dimplephotography.mansa",
+  instagram: "@dimpel_photography_mansa",
   address: "Near Bus Stand Road, Mansa, Punjab 151505",
   founded: 2011,
 };
@@ -157,6 +157,70 @@ export const portfolio = [
     image:
       "https://images.unsplash.com/photo-1583939411023-fa1eb1a68c3f?q=80&w=1600&auto=format&fit=crop",
   },
+  {
+    id: 10,
+    category: "Weddings",
+    title: "Jaspreet & Amanpreet",
+    location: "Mansa Golden Palace",
+    image:
+      "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1600&auto=format&fit=crop",
+  },
+  {
+    id: 11,
+    category: "Portraits",
+    title: "Corporate Headshots",
+    location: "Dimple Studio, Mansa",
+    image:
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1600&auto=format&fit=crop",
+  },
+  {
+    id: 12,
+    category: "Portraits",
+    title: "Individual Portrait Series",
+    location: "Dimple Studio, Mansa",
+    image:
+      "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?q=80&w=1600&auto=format&fit=crop",
+  },
+  {
+    id: 13,
+    category: "Events",
+    title: "Corporate Product Launch",
+    location: "Mansa",
+    image:
+      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1600&auto=format&fit=crop",
+  },
+  {
+    id: 14,
+    category: "Events",
+    title: "50th Wedding Anniversary",
+    location: "Sardulgarh",
+    image:
+      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=1600&auto=format&fit=crop",
+  },
+  {
+    id: 15,
+    category: "Pre-Wedding",
+    title: "Karan & Simran",
+    location: "Mansa Countryside",
+    image:
+      "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop",
+  },
+  {
+    id: 16,
+    category: "Drone & Cinematic",
+    title: "Wedding Highlight Film Still",
+    location: "Budhlada",
+    image:
+      "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1600&auto=format&fit=crop",
+  },
+  {
+    id: 17,
+    category: "Drone & Cinematic",
+    title: "Aerial Venue Establishing Shot",
+    location: "Mansa Golden Palace",
+    image:
+      "https://images.unsplash.com/photo-1473968512647-3e447244af8f?q=80&w=1600&auto=format&fit=crop",
+  },
 ];
 
 export const portfolioFilters = [
@@ -168,6 +232,47 @@ export const portfolioFilters = [
   "Fashion",
   "Baby Shoots",
   "Drone & Cinematic",
+];
+
+// Maps route slugs (used under /portfolio/[slug]) to the portfolio "category"
+// values above, plus display metadata for each dedicated category page.
+export const portfolioCategories = [
+  {
+    slug: "weddings",
+    category: "Weddings",
+    title: "Wedding Photography",
+    description:
+      "Full-day documentary coverage of Punjabi weddings — from the morning chooda to the last dance at the reception.",
+    cover:
+      "https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=1600&auto=format&fit=crop",
+  },
+  {
+    slug: "prewedding",
+    category: "Pre-Wedding",
+    title: "Pre-Wedding Shoots",
+    description:
+      "Mustard fields, old-city lanes and golden-hour countryside sessions across Mansa and the wider Malwa belt.",
+    cover:
+      "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1600&auto=format&fit=crop",
+  },
+  {
+    slug: "portraits",
+    category: "Portraits",
+    title: "Portrait Sessions",
+    description:
+      "Studio and natural-light portraits — personal sessions, family portraits and corporate headshots.",
+    cover:
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1600&auto=format&fit=crop",
+  },
+  {
+    slug: "events",
+    category: "Events",
+    title: "Event Coverage",
+    description:
+      "Sangeet, receptions, anniversaries and corporate events — full coverage with a second shooter when needed.",
+    cover:
+      "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=1600&auto=format&fit=crop",
+  },
 ];
 
 export const testimonials = [

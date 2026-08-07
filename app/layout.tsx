@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import ScrollProgress from "@/components/ScrollProgress";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const display = Cormorant_Garamond({
   subsets: ["latin"],
@@ -62,7 +66,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
       <body className="font-body bg-ink text-ivory antialiased">
+        <ScrollProgress />
+        <Navbar />
         {children}
+        <Footer />
+        <FloatingWhatsApp />
       </body>
     </html>
   );

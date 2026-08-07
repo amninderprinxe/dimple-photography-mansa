@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   Heart,
@@ -24,31 +25,45 @@ const iconMap = {
   Plane,
 };
 
-export default function Services() {
+interface ServicesProps {
+  limit?: number;
+  showHeading?: boolean;
+  showViewAll?: boolean;
+}
+
+export default function Services({
+  limit,
+  showHeading = true,
+  showViewAll = false,
+}: ServicesProps) {
+  const list = limit ? services.slice(0, limit) : services;
+
   return (
     <section id="services" className="relative py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6 md:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mx-auto max-w-2xl text-center"
-        >
-          <p className="eyebrow justify-center">What We Shoot</p>
-          <h2 className="section-heading mt-4">
-            Every kind of story,
-            <br />
-            <span className="gold-text italic">one studio.</span>
-          </h2>
-          <p className="mt-5 text-smoke">
-            Seven disciplines, one consistent standard of light, composition
-            and honesty — chosen and combined to fit your day.
-          </p>
-        </motion.div>
+        {showHeading && (
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="mx-auto max-w-2xl text-center"
+          >
+            <p className="eyebrow justify-center">What We Shoot</p>
+            <h2 className="section-heading mt-4">
+              Every kind of story,
+              <br />
+              <span className="gold-text italic">one studio.</span>
+            </h2>
+            <p className="mt-5 text-smoke">
+              Seven disciplines, one consistent standard of light, composition
+              and honesty — chosen and combined to fit your day.
+            </p>
+          </motion.div>
+        )}
 
         <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, i) => {
+          {list.map((service, i) => {
             const Icon = iconMap[service.icon as keyof typeof iconMap];
             return (
               <motion.div
@@ -80,18 +95,26 @@ export default function Services() {
                   <p className="mt-2 text-sm leading-relaxed text-smoke">
                     {service.description}
                   </p>
-                  <a
-                    href="#contact"
+                  <Link
+                    href="/contact"
                     className="mt-4 inline-flex items-center gap-1.5 text-xs uppercase tracking-wider text-gold-light transition-all group-hover:gap-2.5"
                   >
                     Enquire
                     <ArrowUpRight size={14} />
-                  </a>
+                  </Link>
                 </div>
               </motion.div>
             );
           })}
         </div>
+
+        {showViewAll && (
+          <div className="mt-14 text-center">
+            <Link href="/services" className="btn-outline">
+              View All Services &amp; Pricing
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

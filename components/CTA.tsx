@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Camera } from "lucide-react";
 
@@ -37,10 +38,10 @@ export default function CTA() {
               we&apos;ll check availability and send a package built around
               your day.
             </p>
-            <a href="#contact" className="btn-gold mt-2">
+            <Link href="/booking" className="btn-gold mt-2">
               <Camera size={16} />
               Check Availability
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

@@ -72,25 +72,7 @@ export default function Contact() {
   return (
     <section id="contact" className="relative py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6 md:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mx-auto max-w-2xl text-center"
-        >
-          <p className="eyebrow justify-center">Get In Touch</p>
-          <h2 className="section-heading mt-4">
-            Let&apos;s talk about
-            <span className="gold-text italic"> your date.</span>
-          </h2>
-          <p className="mt-5 text-smoke">
-            Fill in the form or reach us directly — we usually reply within a
-            few hours.
-          </p>
-        </motion.div>
-
-        <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-5">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-5">
           {/* Info column */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}

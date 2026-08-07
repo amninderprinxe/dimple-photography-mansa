@@ -1,13 +1,15 @@
+import Link from "next/link";
 import { Instagram, Facebook, Youtube, Phone, Mail } from "lucide-react";
 import ApertureMark from "./ui/ApertureMark";
 import { studio } from "@/lib/data";
 
 const quickLinks = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Films", href: "/films" },
+  { label: "Booking", href: "/booking" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const serviceLinks = [
@@ -63,12 +65,12 @@ export default function Footer() {
             <ul className="mt-4 space-y-2.5">
               {quickLinks.map((l) => (
                 <li key={l.href}>
-                  <a
+                  <Link
                     href={l.href}
                     className="text-sm text-smoke transition-colors hover:text-gold-light"
                   >
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -79,12 +81,12 @@ export default function Footer() {
             <ul className="mt-4 space-y-2.5">
               {serviceLinks.map((s) => (
                 <li key={s}>
-                  <a
-                    href="#services"
+                  <Link
+                    href="/services"
                     className="text-sm text-smoke transition-colors hover:text-gold-light"
                   >
                     {s}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

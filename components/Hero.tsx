@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
 import { ArrowDown, Camera, MapPin } from "lucide-react";
 import ApertureMark from "./ui/ApertureMark";
 import { studio, stats } from "@/lib/data";
@@ -85,13 +86,13 @@ export default function Hero() {
           transition={{ duration: 0.9, delay: 0.75 }}
           className="mt-10 flex flex-col items-center gap-4 sm:flex-row"
         >
-          <a href="#contact" className="btn-gold">
+          <Link href="/booking" className="btn-gold">
             <Camera size={16} />
             Book Your Story
-          </a>
-          <a href="#portfolio" className="btn-outline">
+          </Link>
+          <Link href="/portfolio" className="btn-outline">
             View Portfolio
-          </a>
+          </Link>
         </motion.div>
 
         {/* Stats strip */}
