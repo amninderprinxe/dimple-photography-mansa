@@ -49,7 +49,7 @@ export default function Footer() {
                       ? `https://instagram.com/${studio.instagram.replace("@", "")}`
                       : i === 1
                       ? `https://www.facebook.com/${studio.facebook.replace("@", "")}`
-                      : `https://www.youtube.com/${studio.youtube.replace("@", "")}`
+                      : `https://www.youtube.com/${studio.youtube.startsWith("@") ? studio.youtube : "@" + studio.youtube}`
                   }
                   target="_blank"
                   rel="noopener noreferrer"
