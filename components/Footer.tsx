@@ -47,7 +47,9 @@ export default function Footer() {
                   href={
                     i === 0
                       ? `https://instagram.com/${studio.instagram.replace("@", "")}`
-                      : "#"
+                      : i === 1
+                      ? `https://www.facebook.com/${studio.facebook.replace("@", "")}`
+                      : `https://www.youtube.com/${studio.youtube.replace("@", "")}`
                   }
                   target="_blank"
                   rel="noopener noreferrer"

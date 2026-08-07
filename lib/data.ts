@@ -7,6 +7,8 @@ export const studio = {
   whatsapp: "919877083009",
   email: "gs239087@gmail.com",
   instagram: "@dimpel_photography_mansa",
+  facebook: "@dimplephotography5883",
+  youtube: "https://www.youtube.com/@dimplephotography5883",
   address: "Near Bus Stand Road, Mansa, Punjab 151505",
   founded: 2011,
 };
