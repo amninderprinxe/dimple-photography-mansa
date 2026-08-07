@@ -29,7 +29,7 @@ export default function PortfolioPage() {
           <p className="eyebrow text-center">Browse by Category</p>
           <h2 className="section-heading mt-4 text-center">
             Find the story
-            <span className="gold-text italic"> you're after.</span>
+            <span className="gold-text italic"> you&apos;re after.</span>
           </h2>
 
           <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

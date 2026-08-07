@@ -1,4 +1,5 @@
 import ApertureMark from "@/components/ui/ApertureMark";
+import { Link } from "lucide-react";
 
 export default function NotFound() {
   return (
@@ -11,9 +12,9 @@ export default function NotFound() {
         The page you&apos;re looking for may have been moved or never
         developed. Let&apos;s get you back to the gallery.
       </p>
-      <a href="/" className="btn-gold mt-8">
+      <Link href="/" className="btn-gold mt-8">
         Back to Home
-      </a>
+      </Link>
     </main>
   );
 }
