@@ -1,5 +1,5 @@
-import ApertureMark from "@/components/ui/ApertureMark";
 import { Link } from "lucide-react";
+import ApertureMark from "@/components/ui/ApertureMark";
 
 export default function NotFound() {
   return (
