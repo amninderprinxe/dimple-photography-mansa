@@ -205,17 +205,15 @@ function FieldShell({
         {children}
         <label
           htmlFor={htmlFor}
-          className={`pointer-events-none absolute left-4 transition-all duration-200 ${
-            active
+          className={`pointer-events-none absolute left-4 transition-all duration-200 ${active
               ? "top-2 text-[11px] tracking-wide"
               : "top-1/2 -translate-y-1/2 text-sm"
-          } ${
-            showError
+            } ${showError
               ? "text-red-400"
               : active
                 ? "text-gold-light"
                 : "text-smoke"
-          }`}
+            }`}
         >
           {label}
           {required && <span className="text-gold"> *</span>}
@@ -276,10 +274,9 @@ export default function BookingForm() {
   };
 
   const inputClass = (name: FieldName) =>
-    `peer w-full rounded-xl border bg-white/[0.03] px-4 pb-2.5 pt-6 text-sm text-ivory outline-none transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-gold/50 ${
-      touched[name] && errors[name]
-        ? "border-red-400/60 focus:border-red-400"
-        : "border-white/10 focus:border-gold/60 focus:bg-white/[0.05]"
+    `peer w-full rounded-xl border bg-white/[0.03] px-4 pb-2.5 pt-6 text-sm text-ivory outline-none transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-gold/50 ${touched[name] && errors[name]
+      ? "border-red-400/60 focus:border-red-400"
+      : "border-white/10 focus:border-gold/60 focus:bg-white/[0.05]"
     }`;
 
   const handleSubmit = async (e: React.FormEvent) => {
